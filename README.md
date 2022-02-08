@@ -35,3 +35,15 @@ http://138.68.170.14:30000
 
 In the same jenkins instance there is job that can be run to populate new test results into the staging back end.
 It's called `test-examples` an you can find the code for it here (https://github.com/alexwatts/test-examples)
+
+## Authors
+
+* **Alex Watts** - (https://github.com/alexwatts)
+
+## License
+
+This project is licensed under the MIT License
+
+## Acknowledgments
+
+* https://tech.ebayinc.com/engineering/failbot
