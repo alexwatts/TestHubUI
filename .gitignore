@@ -1,0 +1,7 @@
+.idea
+build
+/results
+.DS_Store
+out
+node_modules
+yarn-error.log
