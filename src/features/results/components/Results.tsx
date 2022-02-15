@@ -10,7 +10,7 @@ import {DisplayResult, RowData} from "../types";
 import styles from '../Result.module.css'
 
 interface ResultProps {
-    results: DisplayResult;
+    results: DisplayResult[];
 }
 
 export function Results(props: ResultProps) {
@@ -38,17 +38,23 @@ export function Results(props: ResultProps) {
         )
     }
 
-    return (
-        <span className={styles.value}>
-            <table className={styles.styledtable}>
+    const table = function (group: DisplayResult, idx: number) {
+        return (
+            <table key={idx} className={styles.styledtable}>
                 <thead>
-                    {headerRow(props.results.rows[0])}
+                {group.rows.slice(0, 1).map(headerRow)}
                 </thead>
                 <tbody>
-                    {props.results.rows.slice(1, props.results.rows.length).map(row)}
+                {group.rows.slice(1, group.rows.length).map(row)}
                 </tbody>
             </table>
+        )
+    }
+
+    return (
+        <span className={styles.value}>
+            {props.results.map(table)}
         </span>
-    );
+    )
 
 }

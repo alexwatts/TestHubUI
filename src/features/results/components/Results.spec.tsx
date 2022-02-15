@@ -20,12 +20,12 @@ describe('Results Component test', () => {
         ]
         store = mockStore({
             displayResult: {
-                value: {
+                value: [{
                     rows:[
                         { name: "header", columns: headerColumns},
                         { name: "aTest", columns: testColumns}
                     ]
-                }
+                }]
             },
             status: 'idle'
         });

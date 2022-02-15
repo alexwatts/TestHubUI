@@ -4,12 +4,12 @@ import { fetchResults } from '../resultAPI';
 import {DisplayResult} from "../types";
 
 export interface ResultsState {
-  value: DisplayResult;
+  value: DisplayResult[];
   status: 'idle' | 'loading' | 'failed';
 }
 
 const initialState: ResultsState = {
-  value:  { rows:[ { name: "header", columns: []}] },
+  value:  [{ rows:[ { name: "header", columns: []}] }],
   status: 'idle',
 };
 
@@ -33,7 +33,8 @@ export const resultsSlice = createSlice({
       })
       .addCase(fetchAsync.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.value = action.payload;
+        // @ts-ignore
+        state.value = action.payload
       });
   },
 });
