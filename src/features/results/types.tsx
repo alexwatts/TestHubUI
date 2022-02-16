@@ -1,4 +1,5 @@
 export interface DisplayResult {
+    group: string,
     rows: RowData[];
 }
 
