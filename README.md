@@ -21,10 +21,10 @@ http://localhost:3000
 The UI should look similar to the one running on staging:
 
 ```
-http://134.209.180.137:30001
+http://165.22.127.149:30001
 ```
 
-There is a Jenkins pipeline [Here](http://134.209.180.137:30000) for deploying the main branch to staging. It's the job named 'TestHub-pipeline'. Access with the below Credentials
+There is a Jenkins pipeline [Here](http://165.22.127.149:30000) for deploying the main branch to staging. It's the job named 'TestHub-pipeline'. Access with the below Credentials
 
 ```
 username: testhub
