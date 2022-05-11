@@ -43,3 +43,7 @@
 .hover_img a { position:relative; }
 .hover_img a span { position:absolute; display:none; z-index:99; }
 .hover_img a:hover span { display:block; }
+
+.headercolumn {
+    width: 200px;
+}

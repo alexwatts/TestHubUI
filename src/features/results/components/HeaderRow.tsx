@@ -1,6 +1,7 @@
 import React from "react";
 import {RowProps, ColumnData} from "../types";
 import {HeaderColumn} from "./HeaderColumn";
+import styles from '../Result.module.css'
 
 export function HeaderRow(props: RowProps) {
 
@@ -15,7 +16,7 @@ export function HeaderRow(props: RowProps) {
 
     return (
         <tr data-testid='header-row'>
-            <td>Test Runs</td>
+            <td  className={styles.headercolumn} >Test Runs</td>
             {props.columns.map(headerColumn)}
         </tr>
     );
