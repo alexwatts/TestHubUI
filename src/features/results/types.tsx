@@ -8,10 +8,17 @@ export interface RowData {
     columns: ColumnData[];
 }
 
+export interface Property {
+    name: string;
+    value: string;
+}
+
 export interface ColumnData {
     key: string;
     display: string;
     image?: ImageData;
+    messages?: string[];
+    properties?: Property[];
 }
 
 export interface ImageData {
@@ -29,8 +36,19 @@ export interface ColumnProps {
     columnId: number;
     display: string;
     image?: ImageData;
+    messages?: string[];
+    properties?: Property[];
 }
 
 export interface HoverOverImageIconProps {
-    image?: ImageData
+    image?: ImageData;
 }
+
+export interface MessageProps {
+    messages?: string[];
+}
+
+export interface JobProps {
+    properties?: Property[];
+}
+

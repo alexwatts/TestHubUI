@@ -15,7 +15,9 @@ export function Row(props: RowProps) {
                 key={idx}
                 columnId={idx}
                 display={column.display}
-                image={column.image}/>
+                image={column.image}
+                messages={column.messages}
+                properties={column.properties} />
         )
     }
 

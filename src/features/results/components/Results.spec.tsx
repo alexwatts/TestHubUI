@@ -16,7 +16,7 @@ describe('Results Component test', () => {
             {display: "2022-02-02T14:07:12.57943864"}
         ]
         const testColumns = [
-            {display: "passed"}, {display: "failed"}, {display: "empty"}
+            {display: "passed"}, {display: "failed", messages: ["message"]}, {display: "empty"}
         ]
         store = mockStore({
             displayResult: {
