@@ -8,6 +8,7 @@ import {Row} from "./Row";
 import {HeaderRow} from "./HeaderRow";
 import {DisplayResult, RowData} from "../types";
 import styles from '../Result.module.css'
+import Container from 'react-bootstrap/Container';
 
 interface ResultProps {
     results: DisplayResult[];
@@ -40,14 +41,10 @@ export function Results(props: ResultProps) {
 
     const table = function (group: DisplayResult, idx: number) {
         return (
-            <table key={idx} className={styles.styledtable}>
-                <thead>
+                <Container>
                 {group.rows.slice(0, 1).map(headerRow)}
-                </thead>
-                <tbody>
                 {group.rows.slice(1, group.rows.length).map(row)}
-                </tbody>
-            </table>
+                </Container>
         )
     }
 

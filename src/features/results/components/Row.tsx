@@ -1,6 +1,8 @@
 import React from "react";
 import {Column} from "./Column";
 import {ColumnData} from "../types";
+import BootstrapRow from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 interface RowProps {
   name: string
@@ -22,10 +24,10 @@ export function Row(props: RowProps) {
     }
 
     return (
-        <tr>
-          <td>{props.name}</td>
+        <BootstrapRow>
+          <Col>{props.name}</Col>
           {props.columns.map(column)}
-        </tr>
+        </BootstrapRow>
     );
 
 }

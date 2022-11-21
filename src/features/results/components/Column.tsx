@@ -5,6 +5,7 @@ import {ColumnProps} from "../types";
 import {HoverOverImageIcon} from "./HoverOverImageIcon";
 import {Message} from "./Message";
 import {Job} from "./Job";
+import Col from 'react-bootstrap/Col';
 
 export function Column(props: ColumnProps) {
     const failed = props.display === 'failed'
@@ -12,7 +13,7 @@ export function Column(props: ColumnProps) {
     const empty = props.display === 'empty'
 
     return (
-        <td data-testid={'test-result-' + props.columnId}
+        <Col data-testid={'test-result-' + props.columnId}
             className={
                 classNames(
                     failed && styles.columnFailed,
@@ -23,6 +24,6 @@ export function Column(props: ColumnProps) {
             <Job properties={props.properties}/>
             <HoverOverImageIcon image={props.image}/>
             <Message messages={props.messages}/>
-        </td>
+        </Col>
     );
 }

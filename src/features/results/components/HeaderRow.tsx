@@ -2,6 +2,8 @@ import React from "react";
 import {RowProps, ColumnData} from "../types";
 import {HeaderColumn} from "./HeaderColumn";
 import styles from '../Result.module.css'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export function HeaderRow(props: RowProps) {
 
@@ -16,10 +18,10 @@ export function HeaderRow(props: RowProps) {
     }
 
     return (
-        <tr data-testid='header-row'>
-            <td  className={styles.headercolumn} >Test Runs</td>
+        <Row data-testid='header-row'>
+            <Col>Test Runs</Col>
             {props.columns.map(headerColumn)}
-        </tr>
+        </Row>
     );
 
 }

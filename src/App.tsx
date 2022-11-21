@@ -16,7 +16,7 @@ function App() {
 
   return (
 
-    <Container className="App">
+    <div className="App">
       <div className="App-splash">
         <h1 className="fade-in header">
           TestHub
@@ -25,7 +25,7 @@ function App() {
        <header className="App-header">
        </header>
        <ResultsContainer/>
-    </Container>
+    </div>
   );
 }
 
