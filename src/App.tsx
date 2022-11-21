@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import './App.css';
 import ResultsContainer from "./features/results/components/ResultsContainer";
+import Container from 'react-bootstrap/Container';
+
 
 function App() {
 
@@ -13,14 +15,17 @@ function App() {
 
 
   return (
-    <div className="App">
-        <div className="App-splash">
-            <h1 className="fade-in">TestHub</h1>
-        </div>
-        <header className="App-header">
-        </header>
-        <ResultsContainer/>
-    </div>
+
+    <Container className="App">
+      <div className="App-splash">
+        <h1 className="fade-in header">
+          TestHub
+        </h1>
+      </div>
+       <header className="App-header">
+       </header>
+       <ResultsContainer/>
+    </Container>
   );
 }
 
