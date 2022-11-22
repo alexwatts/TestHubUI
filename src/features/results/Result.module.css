@@ -10,3 +10,13 @@
 .headerValue {
   font-size: 10px;
 }
+
+html, body, .tooltip, .popover {
+  font-family: sans-serif
+}
+code, kbd, pre, samp, .text-monospace {
+  font-family: monospace
+}
+button, input, optgroup, select, textarea {
+  font-family: inherit
+}
