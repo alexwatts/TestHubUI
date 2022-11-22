@@ -1,8 +1,6 @@
 import React, {useEffect} from 'react';
 import './App.css';
 import ResultsContainer from "./features/results/components/ResultsContainer";
-import Container from 'react-bootstrap/Container';
-
 
 function App() {
 

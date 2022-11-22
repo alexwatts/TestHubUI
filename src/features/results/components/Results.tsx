@@ -42,8 +42,8 @@ export function Results(props: ResultProps) {
     const table = function (group: DisplayResult, idx: number) {
         return (
                 <Container>
-                {group.rows.slice(0, 1).map(headerRow)}
-                {group.rows.slice(1, group.rows.length).map(row)}
+                    {group.rows.slice(0, 1).map(headerRow)}
+                    {group.rows.slice(1, group.rows.length).map(row)}
                 </Container>
         )
     }

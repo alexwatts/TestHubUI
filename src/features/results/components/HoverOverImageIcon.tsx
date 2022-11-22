@@ -4,6 +4,7 @@ import {HoverOverImageIconProps} from "../types";
 import styles from "../Result.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera } from '@fortawesome/free-solid-svg-icons'
+import Button from 'react-bootstrap/Button';
 
 export function HoverOverImageIcon(props: HoverOverImageIconProps) {
 
@@ -15,22 +16,12 @@ export function HoverOverImageIcon(props: HoverOverImageIconProps) {
     }
 
     return (
-        <div className={
-            classNames(
-                styles.hover_img,
-            )}>
+        <>
             {props.image &&
-                <a href="#/" onClick={() => openImageTab('data:image/png;base64,' + props.image?.data)} >
+                <Button className='btn-sm' href="#/" onClick={() => openImageTab('data:image/png;base64,' + props.image?.data)} >
                     <FontAwesomeIcon icon={faCamera}/>
-                    <span>
-                        <img
-                            src={'data:image/png;base64,' + props.image.data}
-                            width={400}
-                            height={200}
-                            alt={'screenshot'}
-                        />
-                    </span>
-                </a>}
-        </div>
+                </Button>
+            }
+        </>
     );
 }

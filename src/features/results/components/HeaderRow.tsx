@@ -1,7 +1,6 @@
 import React from "react";
 import {RowProps, ColumnData} from "../types";
 import {HeaderColumn} from "./HeaderColumn";
-import styles from '../Result.module.css'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -18,8 +17,8 @@ export function HeaderRow(props: RowProps) {
     }
 
     return (
-        <Row data-testid='header-row'>
-            <Col>Test Runs</Col>
+        <Row className='border bg-secondary text-light' data-testid='header-row'>
+            <Col className='fw-bold col-sm-3'>Test Runs</Col>
             {props.columns.map(headerColumn)}
         </Row>
     );

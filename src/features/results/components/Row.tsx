@@ -24,8 +24,8 @@ export function Row(props: RowProps) {
     }
 
     return (
-        <BootstrapRow>
-          <Col>{props.name}</Col>
+        <BootstrapRow className=''>
+          <Col className="col-sm-3 border border-dark">{props.name}</Col>
           {props.columns.map(column)}
         </BootstrapRow>
     );
