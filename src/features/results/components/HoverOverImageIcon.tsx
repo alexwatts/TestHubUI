@@ -1,7 +1,5 @@
 import React from "react";
-import classNames from "classnames";
 import {HoverOverImageIconProps} from "../types";
-import styles from "../Result.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera } from '@fortawesome/free-solid-svg-icons'
 import Button from 'react-bootstrap/Button';
