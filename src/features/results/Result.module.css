@@ -12,11 +12,11 @@
 }
 
 html, body, .tooltip, .popover {
-  font-family: sans-serif
+  font-family: 'Times New Roman', serif !important;
 }
 code, kbd, pre, samp, .text-monospace {
-  font-family: monospace
+  font-family: 'Times New Roman', serif !important;
 }
 button, input, optgroup, select, textarea {
-  font-family: inherit
+  font-family: 'Times New Roman', serif !important;
 }

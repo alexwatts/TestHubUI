@@ -20,7 +20,7 @@ function App() {
       <div className="App-splash">
         <Row className='align-items-center h-100'>
             <Col className='h-20'>
-                <h1 className="fade-in">
+                <h1 className="fade-in fst-italic fw-bold">
                   TestHub
                 </h1>
             </Col>
