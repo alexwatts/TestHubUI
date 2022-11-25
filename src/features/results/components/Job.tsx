@@ -11,8 +11,6 @@ export function Job(props: JobProps) {
         { (props.properties && props.properties.length > 0 ) &&
             <Button className='btn-sm' href={decodeURIComponent(props.properties[0].value)} target='_blank'>
                 <FontAwesomeIcon icon={faLink}/>
-        }
-     </>
             </Button>
         }
      </>
