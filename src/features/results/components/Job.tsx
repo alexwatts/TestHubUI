@@ -8,7 +8,7 @@ export function Job(props: JobProps) {
     return (
      <>
         { (props.properties && props.properties.length > 0 ) &&
-            <Button className='btn-sm' href={props.properties[0].value} target='_blank'>
+            <Button className='btn-sm' href={decodeURI(props.properties[0].value)} target='_blank'>
                 <FontAwesomeIcon icon={faLink}/>
             </Button>
         }
