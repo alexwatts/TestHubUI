@@ -3,7 +3,6 @@ import {JobProps} from "../types";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLink} from "@fortawesome/free-solid-svg-icons";
 import Button from 'react-bootstrap/Button';
-import {decode} from 'html-entities';
 
 export function Job(props: JobProps) {
     return (
