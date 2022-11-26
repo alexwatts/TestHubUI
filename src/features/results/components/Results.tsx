@@ -9,7 +9,6 @@ import {HeaderRow} from "./HeaderRow";
 import {DisplayResult, RowData} from "../types";
 import styles from '../Result.module.css'
 import Container from 'react-bootstrap/Container';
-import Badge from 'react-bootstrap/Badge';
 
 interface ResultProps {
     results: DisplayResult[];
