@@ -17,8 +17,8 @@ export function HeaderRow(props: RowProps) {
     }
 
     return (
-        <Row className='border bg-secondary text-light' data-testid='header-row'>
-            <Col className='fw-bold col-sm-3'>Test Runs</Col>
+        <Row className='text-light flex-nowrap' data-testid='header-row'>
+            <Col className='fw-bold col-sm-3 border bg-secondary'>Test Runs</Col>
             {props.columns.map(headerColumn)}
         </Row>
     );

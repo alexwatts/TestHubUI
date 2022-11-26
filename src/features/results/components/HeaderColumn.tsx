@@ -25,7 +25,7 @@ export function HeaderColumn(props: ColumnProps) {
             className={
                 classNames(
                     styles.headerValue,
-                    'col-sm-1'
+                    'col-sm-1 border bg-secondary'
                 )
             }>
             <Row><Col className='fw-bold'>{formatDate(props.display)}</Col></Row>

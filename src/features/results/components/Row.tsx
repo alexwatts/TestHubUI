@@ -24,7 +24,7 @@ export function Row(props: RowProps) {
     }
 
     return (
-        <BootstrapRow className=''>
+        <BootstrapRow className='flex-nowrap'>
           <Col className="col-sm-3 border border-dark">{props.name}</Col>
           {props.columns.map(column)}
         </BootstrapRow>
