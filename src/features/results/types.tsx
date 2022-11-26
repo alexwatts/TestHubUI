@@ -51,4 +51,3 @@ export interface MessageProps {
 export interface JobProps {
     properties?: Property[];
 }
-

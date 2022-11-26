@@ -9,6 +9,7 @@ import {HeaderRow} from "./HeaderRow";
 import {DisplayResult, RowData} from "../types";
 import styles from '../Result.module.css'
 import Container from 'react-bootstrap/Container';
+import Badge from 'react-bootstrap/Badge';
 
 interface ResultProps {
     results: DisplayResult[];
@@ -21,11 +22,11 @@ export function Results(props: ResultProps) {
         dispatch(fetchAsync())
     }, [dispatch])
 
-    const headerRow = function (row: RowData) {
+    const headerRow = function (row: RowData, groupName: string) {
         return (
             <HeaderRow
                 key={0}
-                name={row.name}
+                name={"Test Runs - " + groupName}
                 columns={row.columns}/>
         )
     }
@@ -42,7 +43,7 @@ export function Results(props: ResultProps) {
     const table = function (group: DisplayResult, idx: number) {
         return (
                 <Container>
-                    {group.rows.slice(0, 1).map(headerRow)}
+                    {headerRow(group.rows[0], group.group)}
                     {group.rows.slice(1, group.rows.length).map(row)}
                 </Container>
         )
