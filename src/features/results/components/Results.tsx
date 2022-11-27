@@ -9,9 +9,11 @@ import {HeaderRow} from "./HeaderRow";
 import {DisplayResult, RowData} from "../types";
 import styles from '../Result.module.css'
 import Container from 'react-bootstrap/Container';
+import Spinner from 'react-bootstrap/Spinner';
 
 interface ResultProps {
     results: DisplayResult[];
+    loadingState: string;
 }
 
 export function Results(props: ResultProps) {
@@ -49,9 +51,23 @@ export function Results(props: ResultProps) {
     }
 
     return (
-        <span className={styles.value}>
-            {props.results.map(table)}
-        </span>
+<>
+       { ( props.loadingState == 'loading' ) &&
+                        <Spinner
+                                  as="span"
+                                  animation="grow"
+                                  size="sm"
+                                  role="status"
+                                  aria-hidden="true"
+                                />
+                    }
+       { ( props.loadingState == 'idle' ) &&
+                        <span className={styles.value}>
+                                    {props.results.map(table)}
+                                </span>
+       }
+</>
+
     )
 
 }

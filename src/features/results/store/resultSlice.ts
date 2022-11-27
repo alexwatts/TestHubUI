@@ -10,7 +10,7 @@ export interface ResultsState {
 
 const initialState: ResultsState = {
   value:  [{ group: "init", rows:[ { name: "header", columns: []}] }],
-  status: 'idle',
+  status: 'loading',
 };
 
 export const fetchAsync = createAsyncThunk(
@@ -40,5 +40,7 @@ export const resultsSlice = createSlice({
 });
 
 export const selectResults = (state: RootState) => state.displayResult.value;
+
+export const selectLoadingState = (state: RootState) => state.displayResult.status;
 
 export default resultsSlice.reducer;
