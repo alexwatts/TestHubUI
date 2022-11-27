@@ -52,7 +52,7 @@ export function Results(props: ResultProps) {
 
     return (
 <>
-       { ( props.loadingState == 'loading' ) &&
+       { ( props.loadingState === 'loading' ) &&
                         <Spinner
                                   as="span"
                                   animation="grow"
@@ -61,7 +61,7 @@ export function Results(props: ResultProps) {
                                   aria-hidden="true"
                                 />
                     }
-       { ( props.loadingState == 'idle' ) &&
+       { ( props.loadingState === 'idle' ) &&
                         <span className={styles.value}>
                                     {props.results.map(table)}
                                 </span>
