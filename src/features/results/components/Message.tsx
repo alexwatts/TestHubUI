@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export function Message(props: MessageProps) {
 
@@ -14,7 +16,8 @@ export function Message(props: MessageProps) {
     return (
         <>
             { (props.messages && props.messages.length > 0)  &&
-            <>
+            <Row className='mt-1 mb-1 '>
+               <Col className='col-sm-12'>
                  <Button className='btn-sm' variant="primary" onClick={handleShow}>
                     <FontAwesomeIcon icon={faEnvelope}/>
                   </Button>
@@ -33,7 +36,8 @@ export function Message(props: MessageProps) {
                       </Button>
                     </Modal.Footer>
                   </Modal>
-              </>
+                </Col>
+             </Row>
             }
         </>
     );

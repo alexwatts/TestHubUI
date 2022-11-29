@@ -5,7 +5,6 @@ import {ColumnProps} from "../types";
 import {HoverOverImageIcon} from "./HoverOverImageIcon";
 import {Message} from "./Message";
 import {Job} from "./Job";
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export function Column(props: ColumnProps) {
@@ -24,13 +23,13 @@ export function Column(props: ColumnProps) {
                 )
             }>
                 { (props.properties && props.properties.length > 0 ) &&
-                    <Row className='mt-1 mb-1'><Col className='col-sm-12'><Job properties={props.properties}/></Col></Row>
+                    <Job properties={props.properties}/>
                 }
                 { (props.image) &&
-                    <Row className='mt-1 mb-1 '><Col className='col-sm-12'><HoverOverImageIcon image={props.image}/></Col></Row>
+                    <HoverOverImageIcon image={props.image}/>
                 }
                 { (props.messages && props.messages.length > 0)  &&
-                    <Row className='mt-1 mb-1 '><Col className='col-sm-12'><Message messages={props.messages}/></Col></Row>
+                    <Message messages={props.messages}/>
                 }
         </Col>
     );
