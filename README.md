@@ -24,7 +24,7 @@ The UI should look similar to the one running on staging:
 http://165.22.112.179:30001
 ```
 
-There is a Jenkins pipeline [Here](http://165.22.112.179:30000/) for deploying the main branch to staging. It's the job named 'TestHub-pipeline'. Access with the below Credentials
+There is a Jenkins pipeline [Here](http://139.59.172.253:30000/) for deploying the main branch to staging. It's the job named 'TestHub-pipeline'. Access with the below Credentials
 
 ```
 username: testhub
