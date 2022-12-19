@@ -13,13 +13,13 @@ const initialState: ResultsState = {
   status: 'loading',
 };
 
-export const fetchAsync = createAsyncThunk(
-  'results/fetchResults',
-  async () => {
-    const response = await fetchResults();
-    return response;
-  }
-);
+export const fetchResultsAsync = createAsyncThunk(
+      'results/fetchResults',
+      async (groups: string[]) => {
+        const response = await fetchResults(groups);
+        return response
+      }
+  );
 
 export const resultsSlice = createSlice({
   name: 'results',
@@ -28,10 +28,10 @@ export const resultsSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchAsync.pending, (state) => {
+      .addCase(fetchResultsAsync.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchAsync.fulfilled, (state, action) => {
+      .addCase(fetchResultsAsync.fulfilled, (state, action) => {
         state.status = 'idle';
         // @ts-ignore
         state.value = action.payload
@@ -40,7 +40,6 @@ export const resultsSlice = createSlice({
 });
 
 export const selectResults = (state: RootState) => state.displayResult.value;
-
 export const selectLoadingState = (state: RootState) => state.displayResult.status;
 
 export default resultsSlice.reducer;
