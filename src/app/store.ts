@@ -1,7 +1,6 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import resultsReducer from '../features/results/store/resultSlice';
 import groupsReducer from '../features/results/store/groupSlice';
-import selectedGroupReducer from '../features/results/store/groupSlice';
 
 export const store = configureStore({
   reducer: {
