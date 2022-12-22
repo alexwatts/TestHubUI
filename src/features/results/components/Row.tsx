@@ -3,6 +3,8 @@ import {Column} from "./Column";
 import {ColumnData} from "../types";
 import BootstrapRow from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import classNames from "classnames";
+import styles from '../Result.module.css'
 
 interface RowProps {
   name: string
@@ -25,7 +27,13 @@ export function Row(props: RowProps) {
 
     return (
         <BootstrapRow className='flex-nowrap'>
-          <Col className="col-sm-3 border border-dark">{props.name}</Col>
+          <Col className={
+            classNames(
+                styles.columnSize,
+                "col-sm-3 border border-dark"
+            )}>
+            {props.name}
+            </Col>
           {props.columns.map(column)}
         </BootstrapRow>
     );

@@ -19,6 +19,7 @@ export function Column(props: ColumnProps) {
                     failed && styles.columnFailed,
                     passed && styles.columnPassed,
                     empty && styles.columnEmpty,
+                    styles.columnSize,
                     "col-sm-1 border border-dark"
                 )
             }>

@@ -25,6 +25,7 @@ export function HeaderColumn(props: ColumnProps) {
             className={
                 classNames(
                     styles.headerValue,
+                    styles.columnSize,
                     'col-sm-1 border bg-secondary'
                 )
             }>
