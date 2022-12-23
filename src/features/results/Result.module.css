@@ -1,4 +1,3 @@
-
 .columnPassed {
   background-color: green;
 }
@@ -14,7 +13,6 @@
 .columnSize {
   min-width: 80px;
 }
-
 
 html, body, .tooltip, .popover {
   font-family: 'Times New Roman', serif !important;

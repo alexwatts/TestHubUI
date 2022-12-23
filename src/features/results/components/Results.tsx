@@ -48,7 +48,9 @@ export function Results(props: ResultProps) {
     }, [dispatch])
 
     useEffect(() => {
-        dispatch(fetchResultsAsync(props.groups))
+       if (props.groups.length > 0) {
+         dispatch(fetchResultsAsync(props.groups))
+       }
     }, [dispatch, props.groups])
 
     const headerRow = function (row: RowData, groupName: string) {
